@@ -1,0 +1,26 @@
+<view class="order">
+  <van-tabs active="{{active}}" color="#1296db" title-active-color="#1296db">
+    <van-tab title="进行中" name="a">
+      <view wx:if="{{order.length>0?true:false}}" class="order-item-cla">
+        <order-item></order-item>
+      </view>
+      <van-empty
+        wx:else
+        class="custom-image"
+        image="https://img.yzcdn.cn/vant/custom-empty-image.png"
+        description="还没有订单哦"
+      />
+    </van-tab>
+    <van-tab title="历史订单" name="b">
+      <view wx:if="{{history.length>0?true:false}}" class="order-item-cla">
+        <order-item></order-item>
+      </view>
+      <van-empty
+        wx:else
+        class="custom-image"
+        image="https://img.yzcdn.cn/vant/custom-empty-image.png"
+        description="还没有订单哦"
+      />
+    </van-tab>
+  </van-tabs>
+</view>

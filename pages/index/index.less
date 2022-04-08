@@ -1,0 +1,101 @@
+.index{
+  background-color: #eceaea;
+  // height: 100vh;
+  .swiper-box{
+    background-color: #999999;
+    height: 50vh;
+  }
+  .jumpToOrder{
+    background-color: white;
+    width: 90vw;
+    border-radius: 10rpx;
+    // padding: 20rpx;
+    margin: 0 auto;
+    margin-top: -40rpx;
+    box-shadow: 8rpx 20rpx 10rpx #dad8d8;
+    .jump-box{
+      display: flex;
+      height: 20vh;
+      justify-content: space-evenly;
+      align-items: center;
+      z-index: 2022;
+      .jump-icon{
+        image{
+          width: 150rpx;
+          height: 150rpx;
+        }
+      }
+      .jump-title{
+        .top{
+          font-size: 60rpx;
+          font-weight: 500;
+        }
+        .bottom{
+          color: #999999;
+          padding-top: 10rpx;
+          font-size: 30rpx;
+        }
+      }
+    }
+  }
+  .active-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 90vw;
+    border-radius: 10rpx;
+    // padding: 20rpx;
+    margin: 40rpx auto;
+    box-shadow: 8rpx 20rpx 10rpx #dad8d8;
+    image:nth-child(1) {
+      margin-left: 30rpx;
+      width: 80rpx;
+      height: 80rpx;
+    }
+    .discount, .today-active{
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      width: 50%;
+      border: 2rpx dashed #1296db;
+      padding: 20rpx;
+      border-radius: 10rpx;
+      margin: 20rpx;
+    }
+    .discount {
+      margin-right: 10rpx;
+    }
+    .today-active {
+      margin-left: 10rpx;
+    }
+  }
+  .hot-shop {
+    width: 90vw;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 20rpx;
+    box-shadow: 8rpx 20rpx 10rpx #dad8d8;
+    .hot-title {
+      background-color: #1296db;
+      width: 25vw;
+      border-radius: 20rpx 5rpx 20rpx 5rpx;
+      text-align: center;
+      color: white;
+      height: 50rpx;
+      line-height: 50rpx;
+    }
+    .item-box {
+      box-sizing: border-box;
+      padding: 0 20rpx;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+      .item {
+        margin: 20rpx 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.order-item{
+  display: flex;
+  justify-content: space-between;
+  .store-item{
+    .store-name{
+      font-size: 35rpx;
+    }
+    .store-time{
+      padding-top: 10rpx;
+      color: #999;
+      font-size: 20rpx;
+    }
+  }
+  .order-status{
+    color: #999;
+  }
+}
+.order-content{
+  display: flex;
+  margin-top: 20rpx;
+  align-items: center;
+  .order-img{
+    flex: 2;
+    text-align: center;
+    image{
+      width: 100rpx;
+      height: 100rpx;
+      background-color: #999;
+    }
+  }
+  .content{
+    flex: 5;
+    .content-name{
+      font-size: 40rpx;
+    }
+    .content-detail{
+      width: 50vw;
+      color: #999999;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .price{
+    flex: 2;
+    .num{
+      color: #999999;
+    }
+  }
+}

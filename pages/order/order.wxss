@@ -1,0 +1,18 @@
+.order {
+  background-color: #eceaea;
+  height: 100vh;
+}
+.order .order-item-cla {
+  box-sizing: border-box;
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  padding: 20rpx;
+  background-color: white;
+  box-shadow: 20rpx 20rpx 10rpx #dad8d8;
+  border-radius: 10rpx;
+}
+.order .custom-image {
+  width: 400rpx;
+  height: 400rpx;
+}

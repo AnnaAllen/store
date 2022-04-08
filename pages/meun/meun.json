@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-sidebar": "@vant/weapp/sidebar/index",
+    "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+    "van-notify": "@vant/weapp/notify/index",
+    "classify-item": "../../components/classify-item/classify-item",
+    "shop-car": "../../components/shop-car/shop-car"
+  }
+}

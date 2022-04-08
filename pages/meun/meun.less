@@ -1,0 +1,36 @@
+.meun{
+  display: flex;
+  .classify-item{
+    .van-sidebar-item{
+      padding: 20rpx 20rpx;
+      box-sizing: border-box;
+      border-left: 15rpx solid #f7f8fa;
+      margin: 0 auto;
+      text-align: center;
+      image{
+        background-color: #999999;
+        width: 100rpx;
+        height: 100rpx;
+      }
+      &__text{
+        font-size: 30rpx;
+        // text-align: center;
+      }
+      &--selected{
+        // border-color: #1296db;
+        border-left: 15rpx solid #1296db;
+      }
+    }
+  }
+  .item{
+    box-sizing: border-box;
+    margin: 20rpx 40rpx;
+  }
+  .item-detail{
+    margin-top: 30rpx;
+  }
+}
+.car-box{
+  position: sticky;
+  bottom: 0;
+}

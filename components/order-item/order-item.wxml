@@ -1,0 +1,25 @@
+<view class="order">
+  <view class="order-item">
+    <view class="store-item">
+      <view class="store-name">棠德南路店</view>
+      <view class="store-time">2022-01-21 19:29:56</view>
+    </view>
+    <view class="order-status">进行中</view>
+  </view>
+  <view class="order-content">
+    <view class="order-img">
+      <image></image>
+    </view>
+    <view class="content">
+      <view class="content-name">焦糖奶茶</view>
+      <view class="content-detail">
+        中杯/少冰/5分糖/中杯/少冰/5分糖/
+        中杯/少冰/5分糖/中杯/少冰/5分糖/
+      </view>
+    </view>
+    <view class="price">
+      <view class="price-detail">￥129.00</view>
+      <view class="num">共1件</view>
+    </view>
+  </view>
+</view>

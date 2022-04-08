@@ -1,0 +1,67 @@
+.account {
+  background-color: #eceaea;
+  height: 100vh;
+}
+.bg-box {
+  background-color: #3da9e2;
+  height: 20vh;
+  width: 100vh;
+}
+.jumpToOrder {
+  background-color: white;
+  width: 90vw;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  margin-top: -40rpx;
+  box-shadow: 8rpx 20rpx 10rpx #dad8d8;
+}
+.jumpToOrder .jump-box {
+  display: flex;
+  height: 20vh;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 2022;
+}
+.jumpToOrder .jump-box .jump-icon image {
+  width: 150rpx;
+  height: 150rpx;
+}
+.jumpToOrder .jump-box .jump-title .top {
+  font-size: 60rpx;
+  font-weight: 500;
+}
+.jumpToOrder .jump-box .jump-title .bottom {
+  color: #999999;
+  padding-top: 10rpx;
+  font-size: 30rpx;
+}
+.option {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 90vw;
+  margin: 0 auto;
+  border-top: 4rpx dashed #eceaea;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.option .option-1 {
+  flex: 1;
+  text-align: center;
+  color: #999999;
+}
+.option .option-1 .option-num {
+  color: black;
+}
+.option-2 {
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  background-color: white;
+  overflow: hidden;
+}
+.option-2 .option-2-item {
+  margin-bottom: 20rpx;
+}

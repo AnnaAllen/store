@@ -1,0 +1,29 @@
+.classify-item {
+  display: flex;
+}
+.classify-item .image-box image {
+  background-color: #999999;
+  width: 200rpx;
+  height: 200rpx;
+}
+.classify-item .content {
+  margin-left: 30rpx;
+}
+.classify-item .content .name {
+  font-size: 35rpx;
+  padding-top: 10rpx;
+  font-weight: bold;
+}
+.classify-item .content .detail {
+  padding-top: 10rpx;
+  color: #bfbfbf;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+.classify-item .content .price {
+  padding-top: 10rpx;
+}

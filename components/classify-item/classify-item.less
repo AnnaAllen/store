@@ -1,0 +1,32 @@
+.classify-item{
+  display: flex;
+  .image-box{
+    image{
+      background-color: #999999;
+      width: 200rpx;
+      height: 200rpx;
+    }
+  }
+  .content{
+    margin-left: 30rpx;
+    .name{
+      font-size: 35rpx;
+      padding-top: 10rpx;
+      font-weight: bold;
+    }
+    .detail{
+      padding-top: 10rpx;
+      color: #bfbfbf;
+      overflow:hidden;
+      display:-webkit-box; //将对象作为弹性伸缩盒子模型显示;
+      text-overflow:ellipsis;//溢出部分用省略号代替
+      -webkit-line-clamp:2; //设置文本显示两行
+      -webkit-box-orient:vertical;  //从上到下排列子元素;
+      white-space:normal;
+    }
+    .price{
+      // color: #1296db;
+      padding-top: 10rpx;
+    }
+  }
+}

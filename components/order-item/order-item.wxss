@@ -1,0 +1,48 @@
+.order-item {
+  display: flex;
+  justify-content: space-between;
+}
+.order-item .store-item .store-name {
+  font-size: 35rpx;
+}
+.order-item .store-item .store-time {
+  padding-top: 10rpx;
+  color: #999;
+  font-size: 20rpx;
+}
+.order-item .order-status {
+  color: #999;
+}
+.order-content {
+  display: flex;
+  margin-top: 20rpx;
+  align-items: center;
+}
+.order-content .order-img {
+  flex: 2;
+  text-align: center;
+}
+.order-content .order-img image {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #999;
+}
+.order-content .content {
+  flex: 5;
+}
+.order-content .content .content-name {
+  font-size: 40rpx;
+}
+.order-content .content .content-detail {
+  width: 50vw;
+  color: #999999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.order-content .price {
+  flex: 2;
+}
+.order-content .price .num {
+  color: #999999;
+}

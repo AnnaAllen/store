@@ -1,0 +1,26 @@
+<view class="account">
+  <view class="bg-box"></view>
+  <view class="jumpToOrder">
+    <view class="jump-box">
+      <view class="jump-icon">
+        <image src="../../asset/image/zhenzhunaicha.png"></image>
+      </view>
+      <view class="jump-title">
+        <view class="top">Anna</view>
+        <view class="bottom">欢迎光临，卓越点单</view>
+      </view>
+    </view>
+  </view>
+  <view class="option">
+    <view class="option-1" wx:for="{{option}}" wx:key="index">
+      <view class="option-num">{{account.userAccount[index]}}</view>
+      <view class="option-title">{{item}}</view>
+    </view>
+  </view>
+  <view class="option-2">
+    <van-cell class="option-2-item" title="我的优惠券" icon="paid" is-link/>
+  </view>
+  <view class="option-2">
+    <van-cell class="option-2-item" title="修改信息" icon="user-o" is-link/>
+  </view>
+</view>

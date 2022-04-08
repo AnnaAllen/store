@@ -1,0 +1,35 @@
+.shop-car {
+  height: 100rpx;
+  width: 90vw;
+  background-color: white;
+  box-shadow: -20rpx -10prx 5rpx black;
+  border: 4rpx solid #eeeeee;
+  display: flex;
+  border-radius: 100rpx;
+  overflow: hidden;
+  margin: 0 auto;
+  align-items: center;
+}
+.shop-car .shop-icon {
+  flex: 2;
+  text-align: center;
+}
+.shop-car .shop-icon .icon-img {
+  line-height: 100rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.shop-car .shop-price {
+  flex: 6;
+}
+.shop-car .shop-price text {
+  font-size: 40rpx;
+}
+.shop-car .all-price {
+  flex: 3;
+  background-color: #1296db;
+  color: white;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 35rpx;
+}

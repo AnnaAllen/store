@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "order-item": "../../components/order-item/order-item",
+    "van-empty": "@vant/weapp/empty/index"
+  }
+}

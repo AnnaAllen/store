@@ -1,0 +1,21 @@
+<view class="meun">
+  <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+    <van-sidebar-item class="classify-item" wx:for="{{classify}}" wx:key="index">
+      <view slot='title'>
+        <image></image>
+        <view>{{item}}</view>
+      </view>
+    </van-sidebar-item>
+  </van-sidebar>
+  <scroll-view scroll-y="true" style="height: 100vh;">
+    <view class="item">
+      <view class="item-detail" wx:for="{{8}}" wx:key="item">
+        <classify-item></classify-item>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<!-- 购物车 -->
+<view class="car-box">
+  <shop-car></shop-car>
+</view>

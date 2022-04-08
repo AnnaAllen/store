@@ -1,25 +1,47 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
+<view class="index">
+  <swiper class="swiper-box">
+    <swiper-item wx:for="index in 8" wx:key="index">
+      {{index}}
+    </swiper-item>
+  </swiper>
+  <!-- 跳转到点单 -->
+  <view class="jumpToOrder">
+    <view class="jump-box">
+      <view class="jump-icon">
+        <image src="../../asset/image/zhenzhunaicha.png"></image>
       </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+      <view class="jump-title">
+        <view class="top">卓越点单</view>
+        <view class="bottom">自助点单 <text  decode="true"> &nbsp; </text>快速下单</view>
+      </view>
+    </view>
   </view>
-  <view class="usermotto">
-    <!-- <text class="user-motto">{{motto}}</text> -->
-    111
-    <van-button type="default">默认按钮</van-button>
+  <!-- 活动中心 -->
+  <view class="active-center">
+    <view class="discount">
+      <view class="active-title">
+        <view>优惠券</view>
+        <view>discount</view>
+      </view>
+      <view class="active-icon">
+        <image src="../../asset/image/quan.png"></image>
+      </view>
+    </view>
+    <view class="today-active">
+      <view class="active-title">
+        <view>今日优惠</view>
+        <view>action</view>
+      </view>
+      <view class="active-icon">
+        <image src="../../asset/image/shouye (1).png"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 热销饮品 -->
+  <view class="hot-shop">
+    <view class="hot-title">本店热销</view>
+    <view class="item-box">
+      <shop-item class="item" wx:for="item in 2" wx:key="item"></shop-item>
+    </view>
   </view>
 </view>
