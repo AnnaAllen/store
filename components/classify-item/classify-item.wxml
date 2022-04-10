@@ -3,10 +3,13 @@
     <image></image>
   </view>
   <view class="content">
-    <view class="name">苦瓜柠檬茶</view>
+    <view class="name">{{shopItem.menu}}</view>
     <view class="detail">
-      新鲜苦瓜和广东香水柠檬的联合加盟两行新鲜苦瓜和广东香水柠檬的联合加盟两行
+      {{shopItem.describe}}
     </view>
-    <view class="price">￥129</view>
+    <view class="price">
+      <view class="price-detail">￥{{shopItem.price}}</view>
+      <view class="add" bindtap="addItem">+</view>
+    </view>
   </view>
 </view>

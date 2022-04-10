@@ -9,13 +9,25 @@
   overflow: hidden;
   margin: 0 auto;
   align-items: center;
+  // position: relative;
   .shop-icon{
-    flex: 2;
+    flex: 3;
     text-align: center;
     .icon-img{
       line-height: 100rpx;
-      width: 50rpx;
-      height: 50rpx;
+      width: 60rpx;
+      height: 60rpx;
+    }
+    .red-piont{
+      height: 30rpx;
+      width: 30rpx;
+      font-size: 25rpx;
+      background-color: red;
+      color: white;
+      border-radius: 50rpx;
+      position: absolute;
+      top: 10rpx;
+      left: 145rpx;
     }
   }
   .shop-price{
@@ -31,6 +43,137 @@
     line-height: 100rpx;
     text-align: center;
     font-size: 35rpx;
-    
+  }
+  .popup-box{
+    position: relative;
+    .top-box{
+      height: 100%;
+      overflow-y: scroll;
+      image{
+        width: 100%;
+        height: 40vh;
+        background-color: #999999;
+      }
+      .title{
+        font-size: 40rpx;
+        font-weight: bold;
+        padding: 20rpx;
+      }
+      .des{
+        padding: 20rpx;
+        color: #999999;
+      }
+      .xiaoliao{
+        padding: 20rpx;
+        &-title{
+          color: #999999;
+        }
+        &-detail{
+          display: flex;
+          flex-wrap: wrap;
+          .xiaoliao-detail-box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f8f8;
+            height: 60rpx;
+            box-sizing: border-box;
+            padding: 20rpx 40rpx;
+            margin-top: 20rpx;
+            margin-right: 20rpx;
+            border-radius: 10rpx;
+            font-size: 30rpx;
+            &-title{}
+            &-price{}
+          }
+        }
+      }
+      .special{
+        width: 48%;
+        // margin: 20rpx 0rpx 0rpx 0rpx;
+        margin-right: 0rpx !important;
+      }
+      .blank{
+        height: 20vh;
+        width: 100%;
+      }
+    }
+    .bottom-box{
+      position: absolute;
+      bottom: 0;
+      height: 20vh;
+      width: 100%;
+      background-color: white;
+      z-index: 2022;
+      border-top: 2rpx solid #d7d7d7;
+      padding: 20rpx 40rpx;
+      box-sizing: border-box;
+      .price-box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // font-size: 40rpx;
+        font-weight: bold;
+      }
+      .add-shop-car{
+        height: 80rpx;
+        width: 90%;
+        background-color: #1296db;
+        color: white;
+        border-radius: 50rpx;
+        font-size: 35rpx;
+        text-align: center;
+        line-height: 80rpx;
+        margin-top: 35rpx;
+      }
+    }
+    .select{
+      background-color: rgba(18, 150, 219,.1) !important;
+      border: 2rpx solid #1296db;
+    }
+  }
+  .popup-shop-car{
+    position: relative;
+    .clear-blank{
+      height: 80rpx;
+      width: 100%;
+    }
+    .clear-shop{
+      height: 80rpx;
+      width: 100%;
+      background-color: #d7d7d7;
+      line-height: 80rpx;
+      text-align: right;
+      box-sizing: border-box;
+      padding-right: 40rpx;
+      color: #666666;
+      position: sticky;
+      top: 0;
+      z-index: 2022;
+      border: 2rpx solid #d7d7d7;
+    }
+    .shop-car-item{
+      margin: 20rpx 40rpx;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .item-box{
+        display: flex;
+        align-items: center;
+        .shop-car-item-info{
+          margin-left: 40rpx;
+        }
+        .shop-car-item-info-detail{
+          color: #999999;
+          font-size: 25rpx;
+        }
+      }
+      image{
+        width: 100rpx;
+        height: 100rpx;
+        background-color: #999999;
+        border-radius: 10rpx;
+      }
+    }
   }
 }

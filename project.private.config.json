@@ -37,6 +37,13 @@
           "name": "",
           "pathName": "pages/account/account",
           "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/comfirmAnOrder/index",
+          "query": "",
           "scene": null,
           "launchMode": "default"
         }

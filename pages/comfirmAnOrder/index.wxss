@@ -1,0 +1,103 @@
+.order {
+  width: 100%;
+  height: 100vh;
+  background-color: #f6f6f6;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+  position: fixed;
+  overflow-y: scroll;
+}
+.order .order-box1 {
+  margin: 20rpx auto;
+  padding: 40rpx;
+  background-color: white;
+  width: 90%;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+}
+.order .order-box1 .package-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order .order-box1 .package-type .type-1 {
+  height: 100rpx;
+  width: 45%;
+  text-align: center;
+  line-height: 100rpx;
+  border-radius: 10rpx;
+  border: 2rpx solid #999999;
+}
+.order .order-box1 .package-type .select-type {
+  border: 2rpx solid #1296db !important;
+  background-color: rgba(18, 150, 219, 0.2);
+}
+.order .order-box1 .phone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20rpx;
+  margin-top: 20rpx;
+  border-top: 6rpx dashed #f6f6f6;
+}
+.order .order-box2 {
+  background-color: white;
+  width: 90%;
+  border-radius: 10rpx;
+  margin: 20rpx auto;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.order .order-box2-title {
+  padding-bottom: 40rpx;
+}
+.order .order-box2 .shop-detail {
+  display: flex;
+  align-items: center;
+  padding-bottom: 40rpx;
+}
+.order .order-box2 .shop-detail image {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #999999;
+}
+.order .order-box2 .shop-detail .shop-detail-info {
+  margin-left: 40rpx;
+  width: 80%;
+}
+.order .order-box2 .shop-detail .shop-detail-info-1 {
+  display: flex;
+  justify-content: space-between;
+}
+.order .order-box2 .shop-detail .shop-detail-info .special {
+  color: #999999;
+  font-size: 24rpx;
+  padding-top: 10rpx;
+}
+.order .order-box2 .pay {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80rpx;
+  padding-top: 20rpx;
+  border-top: 4rpx dashed #f6f6f6;
+}
+.order .order-box2 .pay .sum {
+  text-align: right;
+}
+.order .order-box2 .pay .sum text {
+  color: #999999;
+}
+.order .order-box2 .pay .sum text:nth-child(2) {
+  font-size: 35rpx;
+  color: black;
+}
+.order .order-box2 .pay .click-pay {
+  border-radius: 50rpx;
+  background-color: #1296db;
+  height: 70rpx;
+  width: 180rpx;
+  color: white;
+  line-height: 70rpx;
+  text-align: center;
+}

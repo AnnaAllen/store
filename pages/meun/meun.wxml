@@ -9,13 +9,16 @@
   </van-sidebar>
   <scroll-view scroll-y="true" style="height: 100vh;">
     <view class="item">
-      <view class="item-detail" wx:for="{{8}}" wx:key="item">
-        <classify-item></classify-item>
+      <view class="item-detail" wx:for="{{shopItem}}" wx:key="index">
+        <classify-item 
+        shopItem="{{item}}"
+        bind:getItemId="getItemId"
+        ></classify-item>
       </view>
     </view>
   </scroll-view>
 </view>
 <!-- 购物车 -->
 <view class="car-box">
-  <shop-car></shop-car>
+  <shop-car bind:close="close" isShow="{{isShow}}"></shop-car>
 </view>

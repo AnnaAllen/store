@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/meun/meun",
     "pages/order/order",
-    "pages/account/account"
+    "pages/account/account",
+    "pages/comfirmAnOrder/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

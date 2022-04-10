@@ -26,4 +26,16 @@
 }
 .classify-item .content .price {
   padding-top: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.classify-item .content .price .add {
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #1296db;
+  color: white;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 50rpx;
 }

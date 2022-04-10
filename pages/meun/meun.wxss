@@ -7,6 +7,7 @@
   border-left: 15rpx solid #f7f8fa;
   margin: 0 auto;
   text-align: center;
+  position: relative;
 }
 .meun .classify-item .van-sidebar-item image {
   background-color: #999999;
@@ -28,5 +29,5 @@
 }
 .car-box {
   position: sticky;
-  bottom: 0;
+  bottom: 30rpx;
 }

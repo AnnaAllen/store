@@ -1,11 +1,144 @@
 <view class="shop-car">
-  <view class="shop-icon">
+  <view class="shop-icon" bindtap="showCar">
     <image class="icon-img" src="../../asset/image/24gf-cartFull6.png"></image>
+    <view class="red-piont">
+      1
+    </view>
   </view>
   <view class="shop-price">
     ￥<text>18.00</text>
   </view>
-  <view class="all-price">
-    去结算1111
+  <view class="all-price" bindtap="jumpToCount">
+    去结算
+  </view>
+  <view class="popup-box">
+    <van-popup
+      show="{{ isShow }}"
+      position="bottom"
+      custom-style="height: 80%;"
+      bind:click-overlay="close"
+      bind:close="close"
+      round="true"
+      closeable="true"
+    >
+      <view class="top-box">
+        <image></image>
+        <view class="title">抹茶拿铁</view>
+        <view class="des">
+          这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述
+        </view>
+        <view class="xiaoliao">
+          <view class="xiaoliao-title">精选小料</view>
+          <view class="xiaoliao-detail" style="justify-content: space-between; margin: 0 20rpx;">
+            <block wx:for="{{extra.content}}" wx:key="index">
+              <view 
+              class="xiaoliao-detail-box special {{extra.select === index ? 'select' : ''}}" 
+              bindtap="selectItem"
+              data-index="{{index}}"
+              data-type="extra"
+              >
+                <view class="xiaoliao-detail-box-title">
+                  {{item.extraName}}
+                </view>
+                <view class="xiaoliao-detail-box-price">
+                  ￥{{item.extraPrice}}
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+        <view class="xiaoliao">
+          <view class="xiaoliao-title">糖度</view>
+          <view class="xiaoliao-detail">
+            <block wx:for="{{sugar.content}}" wx:key="index">
+              <view 
+              class="xiaoliao-detail-box {{sugar.select == index ? 'select': ''}}"
+              bindtap="selectItem"
+              data-index="{{index}}"
+              data-type="sugar"
+              >
+                <view class="xiaoliao-detail-box-title">
+                  {{item}}
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+        <view class="xiaoliao">
+          <view class="xiaoliao-title">温度</view>
+          <view class="xiaoliao-detail">
+            <block wx:for="{{tem.content}}" wx:key="index">
+              <view 
+              class="xiaoliao-detail-box {{tem.select == index?'select':''}}"
+              bindtap="selectItem"
+              data-index="{{index}}"
+              data-type="tem"
+              >
+                <view class="xiaoliao-detail-box-title">
+                  {{item}}
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+        <view class="xiaoliao">
+          <view class="xiaoliao-title">大小</view>
+          <view class="xiaoliao-detail">
+            <block wx:for="{{size.content}}" wx:key="index">
+              <view 
+              class="xiaoliao-detail-box {{size.select == index ? 'select':''}}"
+              bindtap="selectItem"
+              data-index="{{index}}"
+              data-type="size"
+              >
+                <view class="xiaoliao-detail-box-title">
+                  {{item}}
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+        <view class="blank"></view>
+      </view>
+      <view class="bottom-box">
+        <view class="price-box">
+          <view class="bottom-box-price">￥{{12}}</view>
+          <view class="boot-box-step">
+            <van-stepper value="{{ 1 }}" bind:change="onChange" />
+          </view>
+        </view>
+        <view class="add-shop-car" bindtap="addCar">
+          加入购物车
+        </view>
+      </view>
+    </van-popup>
+  </view>
+  <view class="popup-shop-car">
+    <van-popup
+      show="{{ isShowCar }}"
+      position="bottom"
+      custom-style="height: 40%;"
+      bind:click-overlay="closeCar"
+      bind:close="closeCar"
+      round="true"
+      lock-scroll="true"
+    >
+      <view class="clear-shop">
+        <view>清空</view>
+      </view>
+      <block wx:for="{{3}}" wx:key="index">
+        <view class="shop-car-item">
+          <view class="item-box">
+            <image></image>
+            <view class="shop-car-item-info">
+              <view class="shop-car-item-info-title">蜜桃四季春</view>
+              <view class="shop-car-item-info-detail">{{defaultItem.sugar}}/{{defaultItem.tem}}/{{defaultItem.size}}</view>
+              <view class="price">￥{{11}}</view>
+            </view>
+          </view>
+          <van-stepper value="{{ 1 }}" bind:change="onCarChange" />
+        </view>
+      </block>
+    </van-popup>
   </view>
 </view>
