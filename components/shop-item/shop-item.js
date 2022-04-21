@@ -4,7 +4,12 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    shopItem: {
+      type: Object,
+      observer: (oldVal, newVal) => {
+        // console.log(oldVal,newVal)
+      }
+    }
   },
 
   /**

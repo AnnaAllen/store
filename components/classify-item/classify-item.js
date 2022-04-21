@@ -7,7 +7,7 @@ Component({
     shopItem: {
       type: Object,
       observer: (oldVal, newVal) => {
-        console.log(oldVal,newVal)
+        // console.log(oldVal,newVal)
       }
     }
   },

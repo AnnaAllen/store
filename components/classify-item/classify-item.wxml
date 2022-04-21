@@ -1,6 +1,6 @@
 <view class="classify-item">
   <view class="image-box">
-    <image></image>
+    <image src="{{shopItem.menuImage}}"></image>
   </view>
   <view class="content">
     <view class="name">{{shopItem.menu}}</view>

@@ -1,9 +1,13 @@
 <view class="order">
-  <van-tabs active="{{active}}" color="#1296db" title-active-color="#1296db">
+  <van-tabs active="{{active}}" color="#1296db" title-active-color="#1296db" sticky="{{sticky}}">
     <van-tab title="进行中" name="a">
       <view wx:if="{{order.length>0?true:false}}" class="order-item-cla">
-        <order-item></order-item>
-      </view>
+        <block wx:for="{{order}}" wx:key="index">
+          <view class="order-item-box">
+            <order-item orderItem='{{item}}' status="{{item.status}}"></order-item>
+          </view>
+        </block>
+      </view> 
       <van-empty
         wx:else
         class="custom-image"
@@ -12,8 +16,12 @@
       />
     </van-tab>
     <van-tab title="历史订单" name="b">
-      <view wx:if="{{history.length>0?true:false}}" class="order-item-cla">
-        <order-item></order-item>
+      <view wx:if="{{doneOrder.length>0?true:false}}" class="order-item-cla">
+        <block wx:for="{{doneOrder}}" wx:key="index">
+          <view class="order-item-box">
+            <order-item status="{{item.status}}" orderItem='{{item}}'></order-item>
+          </view>
+        </block>
       </view>
       <van-empty
         wx:else

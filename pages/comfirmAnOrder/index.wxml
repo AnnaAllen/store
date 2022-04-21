@@ -1,39 +1,46 @@
 <view class="order">
   <view class="order-box1">
+    <view class="select-eat">请选择就餐方式：</view>
     <view class="package-type">
-      <view class="type-1 select-type">店内就餐</view>
-      <view class="type-1">打包带走</view>
+      <block wx:for="{{eatType}}" wx:key="index">
+        <view class="type-1 {{currentTypeIndex==index?'select-type':''}}" bindtap="changeType" data-index="{{index}}">{{item.name}}</view>
+      </block>
+      <!-- <view class="type-1">打包带走</view> -->
     </view>
     <view class="phone">
       <view class="phone-title">预留电话</view>
       <view class="phone-detail">
-        18927056211
+        189****6211
       </view>
     </view>
   </view>
   <view class="order-box2">
     <view class="order-box2-title">商品列表</view>
-    <block wx:for="{{8}}" wx:key="index">
+    <!-- <view>{{currentTypeIndex}}</view> -->
+    <view wx:for="{{orderItem}}" wx:key="index">
       <view class="shop-detail">
-        <image></image>
+        <image src="{{item.cup.menuImage}}"></image>
         <view class="shop-detail-info">
           <view class="shop-detail-info-1">
-            <view>苦瓜柠檬茶</view>
-            <view>￥13.00</view>
+            <view>{{item.cup.menu}}</view>
+            <view>￥{{item.price}}</view>
           </view>
           <view class="shop-detail-info-1 special">
-            <view>正常糖，正常冰</view>
+            <view>{{item.detail.sugar}}，{{item.detail.tem}}，{{item.detail.size}}</view>
             <view>X1</view>
+          </view>
+          <view class="shop-detail-info-1 special">
+            额外添加：{{item.detail.extra.extraName}}
           </view>
         </view>
       </view>
-    </block>
+    </view>
     <view class="pay">
       <view class="sum">
-        <text>共一件商品，小计</text>
-        <text>￥13.00</text>
+        <text>共{{orderItem.length}}件商品，小计</text>
+        <text>￥{{allPrice}}</text>
       </view>
-      <view class="click-pay">立即支付</view>
+      <view class="click-pay" bindtap="pay">立即支付</view>
     </view>
   </view>
 </view>

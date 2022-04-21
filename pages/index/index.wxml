@@ -1,7 +1,7 @@
 <view class="index">
-  <swiper class="swiper-box">
-    <swiper-item wx:for="index in 8" wx:key="index">
-      {{index}}
+  <swiper class="swiper-box" autoplay="true">
+    <swiper-item wx:for="{{swiperArr}}" wx:key="index" >
+      <image style="width: 100%; height: 100%;" src="{{item}}" mode="aspectFill"></image>
     </swiper-item>
   </swiper>
   <!-- 跳转到点单 -->
@@ -17,7 +17,7 @@
     </view>
   </view>
   <!-- 活动中心 -->
-  <view class="active-center">
+  <!-- <view class="active-center">
     <view class="discount">
       <view class="active-title">
         <view>优惠券</view>
@@ -36,12 +36,35 @@
         <image src="../../asset/image/shouye (1).png"></image>
       </view>
     </view>
-  </view>
+  </view> -->
   <!-- 热销饮品 -->
   <view class="hot-shop">
     <view class="hot-title">本店热销</view>
     <view class="item-box">
-      <shop-item class="item" wx:for="item in 2" wx:key="item"></shop-item>
+      <shop-item class="item" shopItem="{{item}}" wx:for="{{shopItem}}" wx:key="index"></shop-item>
     </view>
+  </view>
+  <!-- 用户登录 -->
+  <view class="login">
+    <van-popup
+      show="{{ showLogin }}"
+      position="bottom"
+      custom-style="height: 30%;"
+      bind:click-overlay="onClose"
+    >
+      <view class="login-box">
+        <view class="store-info">
+          <view class="store-info-box1">
+            欢迎来到奶茶店点单小程序
+          </view>
+          <view class="store-info-box2">
+            首次登录可享受全场免费小料
+          </view>
+        </view>
+        <van-button color="#1899dc"
+        open-type="getUserInfo" type="default">登录进行点单</van-button>
+        <view class="login-tip">登录将会获取微信的用户信息</view>
+      </view>
+    </van-popup>
   </view>
 </view>

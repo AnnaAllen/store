@@ -9,9 +9,8 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#1396db",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "selectedColor": "#1697dc",

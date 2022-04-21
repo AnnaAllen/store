@@ -1,7 +1,8 @@
 Page({
 	data: {
 		account: {
-			userName: "Anna",
+			name: "Anna",
+			avatarUrl: '',
 			userAccount: {
 				'point': 12,
 				'price': 100,
@@ -13,5 +14,13 @@ Page({
 			'price': '余额',
 			'discount': '优惠券'
 		}
+	},
+	onReady() {
+		const {name,avatarUrl} = wx.getStorageSync('userInfo')
+		console.log(name,avatarUrl)
+		this.setData({
+			name,
+			avatarUrl
+		})
 	}
 })

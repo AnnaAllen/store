@@ -1,25 +1,27 @@
 <view class="order">
   <view class="order-item">
     <view class="store-item">
-      <view class="store-name">棠德南路店</view>
-      <view class="store-time">2022-01-21 19:29:56</view>
+      <view class="store-name">{{eatType.name}}</view>
+      <view class="store-time">{{time}}</view>
     </view>
-    <view class="order-status">进行中</view>
+    <view class="order-status {{status==='doing'?'active-item':''}}">{{status==='doing'?'进行中':'已完结'}}</view>
   </view>
-  <view class="order-content">
-    <view class="order-img">
-      <image></image>
-    </view>
-    <view class="content">
-      <view class="content-name">焦糖奶茶</view>
-      <view class="content-detail">
-        中杯/少冰/5分糖/中杯/少冰/5分糖/
-        中杯/少冰/5分糖/中杯/少冰/5分糖/
+  <view> <text decode="true">取餐号：&nbsp;{{num}}</text> </view>
+  <block wx:for="{{cupItem}}" wx:key="index">
+    <view class="order-content">
+      <view class="order-img">
+        <image src="{{item.cup.menuImage}}"></image>
+      </view>
+      <view class="content">
+        <view class="content-name">{{item.cup.menu}}</view>
+        <view class="content-detail">
+          {{item.detail.size}}/{{item.detail.sugar}}/{{item.detail.tem}}
+        </view>
+      </view>
+      <view class="price">
+        <view class="price-detail">￥{{item.price * item.num}}</view>
+        <view class="num">共{{item.num}}件</view>
       </view>
     </view>
-    <view class="price">
-      <view class="price-detail">￥129.00</view>
-      <view class="num">共1件</view>
-    </view>
-  </view>
+  </block>
 </view>

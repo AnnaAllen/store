@@ -1,13 +1,13 @@
 <view class="shop-item">
   <view class="item">
-    <image></image>
-    <view class="title">蜜桃气泡水</view>
+    <image src="{{shopItem.menuImage}}"></image>
+    <view class="title">{{shopItem.menu}}</view>
     <view class="price">
-      <view class="new">￥99</view>
-      <view class="old">￥129</view>
+      <view class="new">￥{{shopItem.price}}</view>
+      <view class="old">￥{{shopItem.price *2}}</view>
     </view>
     <view>
-      <text class="hot">本店已售4000件</text>
+      <text class="hot">本店已售{{shopItem.price*3}}件</text>
     </view>
   </view>
 </view>

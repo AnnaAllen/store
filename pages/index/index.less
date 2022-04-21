@@ -1,5 +1,6 @@
 .index{
   background-color: #eceaea;
+  position: relative;
   // height: 100vh;
   .swiper-box{
     background-color: #999999;
@@ -11,7 +12,9 @@
     border-radius: 10rpx;
     // padding: 20rpx;
     margin: 0 auto;
-    margin-top: -40rpx;
+    // margin-top: -40rpx;
+    position: relative;
+    top: -60rpx;
     box-shadow: 8rpx 20rpx 10rpx #dad8d8;
     .jump-box{
       display: flex;
@@ -95,6 +98,40 @@
       justify-content: space-between;
       .item {
         margin: 20rpx 0;
+      }
+    }
+  }
+  .login{
+    .login-box{
+      box-sizing: border-box;
+      margin: 20rpx;
+      .store-info{
+        width: 100%;
+        height: 180rpx;
+        // margin: auto;
+        // line-height: 90rpx;
+        text-align: center;
+        &-box1{
+          padding-top: 5%;
+          font-size: 40rpx;
+          color: #081f3e;
+          font-weight: bold;
+        }
+        &-box2{
+          padding-top: 3%;
+          color: #1296db;
+        }
+      }
+      .van-button{
+        margin-left: 10%;
+        width: 80%;
+        font-size: 40rpx;
+        border-radius: 10rpx;
+      }
+      .login-tip{
+        text-align: center;
+        color: #bfbfbf;
+        padding-top: 3%;
       }
     }
   }

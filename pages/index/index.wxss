@@ -1,5 +1,6 @@
 .index {
   background-color: #eceaea;
+  position: relative;
 }
 .index .swiper-box {
   background-color: #999999;
@@ -10,7 +11,8 @@
   width: 90vw;
   border-radius: 10rpx;
   margin: 0 auto;
-  margin-top: -40rpx;
+  position: relative;
+  top: -60rpx;
   box-shadow: 8rpx 20rpx 10rpx #dad8d8;
 }
 .index .jumpToOrder .jump-box {
@@ -92,4 +94,34 @@
 }
 .index .hot-shop .item-box .item {
   margin: 20rpx 0;
+}
+.index .login .login-box {
+  box-sizing: border-box;
+  margin: 20rpx;
+}
+.index .login .login-box .store-info {
+  width: 100%;
+  height: 180rpx;
+  text-align: center;
+}
+.index .login .login-box .store-info-box1 {
+  padding-top: 5%;
+  font-size: 40rpx;
+  color: #081f3e;
+  font-weight: bold;
+}
+.index .login .login-box .store-info-box2 {
+  padding-top: 3%;
+  color: #1296db;
+}
+.index .login .login-box .van-button {
+  margin-left: 10%;
+  width: 80%;
+  font-size: 40rpx;
+  border-radius: 10rpx;
+}
+.index .login .login-box .login-tip {
+  text-align: center;
+  color: #bfbfbf;
+  padding-top: 3%;
 }

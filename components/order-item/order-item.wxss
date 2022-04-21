@@ -2,6 +2,9 @@
   display: flex;
   justify-content: space-between;
 }
+.order-item .active-item {
+  color: #1296db !important;
+}
 .order-item .store-item .store-name {
   font-size: 35rpx;
 }

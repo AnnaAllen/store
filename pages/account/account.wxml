@@ -3,11 +3,11 @@
   <view class="jumpToOrder">
     <view class="jump-box">
       <view class="jump-icon">
-        <image src="../../asset/image/zhenzhunaicha.png"></image>
+        <image src="../../asset/image/test.jpg"></image>
       </view>
       <view class="jump-title">
-        <view class="top">Anna</view>
-        <view class="bottom">欢迎光临，卓越点单</view>
+        <view class="top">戴戴^*</view>
+        <view class="bottom">欢迎光临，通用点单</view>
       </view>
     </view>
   </view>
@@ -21,6 +21,6 @@
     <van-cell class="option-2-item" title="我的优惠券" icon="paid" is-link/>
   </view>
   <view class="option-2">
-    <van-cell class="option-2-item" title="修改信息" icon="user-o" is-link/>
+    <van-cell class="option-2-item" title="退出登录" icon="user-o"/>
   </view>
 </view>

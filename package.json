@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vant/weapp": "^1.10.2"
+    "@vant/weapp": "^1.10.2",
+    "axios": "^0.26.1",
+    "axios-miniprogram-adapter": "^0.3.2"
   }
 }

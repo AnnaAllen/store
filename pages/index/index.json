@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-    "shop-item" : "../../components/shop-item/shop-item"
+    "shop-item" : "../../components/shop-item/shop-item",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-button": "@vant/weapp/button/index"
   },
   "navigationStyle":"custom"
 }

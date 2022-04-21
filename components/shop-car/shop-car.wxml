@@ -1,12 +1,13 @@
 <view class="shop-car">
+  <van-toast id="van-toast" />
   <view class="shop-icon" bindtap="showCar">
     <image class="icon-img" src="../../asset/image/24gf-cartFull6.png"></image>
-    <view class="red-piont">
-      1
+    <view class="red-piont" wx:if="{{shopCar.length>0}}">
+      {{shopCar.length}}
     </view>
   </view>
   <view class="shop-price">
-    ￥<text>18.00</text>
+    ￥<text>{{allPrice}}</text>
   </view>
   <view class="all-price" bindtap="jumpToCount">
     去结算
@@ -22,10 +23,10 @@
       closeable="true"
     >
       <view class="top-box">
-        <image></image>
-        <view class="title">抹茶拿铁</view>
+        <image src="{{shopDetial.menuImage}}"></image>
+        <view class="title">{{shopDetial.menu}}</view>
         <view class="des">
-          这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述
+          {{shopDetial.describe}}
         </view>
         <view class="xiaoliao">
           <view class="xiaoliao-title">精选小料</view>
@@ -102,9 +103,9 @@
       </view>
       <view class="bottom-box">
         <view class="price-box">
-          <view class="bottom-box-price">￥{{12}}</view>
+          <view class="bottom-box-price">￥{{shopDetial.price * cupNum}}</view>
           <view class="boot-box-step">
-            <van-stepper value="{{ 1 }}" bind:change="onChange" />
+            <van-stepper value="{{cupNum}}" bind:change="onChange" />
           </view>
         </view>
         <view class="add-shop-car" bindtap="addCar">
@@ -124,19 +125,20 @@
       lock-scroll="true"
     >
       <view class="clear-shop">
-        <view>清空</view>
+        <view bindtap="clearShopCar">清空</view>
       </view>
-      <block wx:for="{{3}}" wx:key="index">
+      <block wx:for="{{shopCar}}" wx:key="index">
         <view class="shop-car-item">
           <view class="item-box">
-            <image></image>
+            <image src="{{item.cup.menuImage}}"></image>
             <view class="shop-car-item-info">
-              <view class="shop-car-item-info-title">蜜桃四季春</view>
-              <view class="shop-car-item-info-detail">{{defaultItem.sugar}}/{{defaultItem.tem}}/{{defaultItem.size}}</view>
-              <view class="price">￥{{11}}</view>
+              <view class="shop-car-item-info-title">{{item.cup.menu}}</view>
+              <view class="shop-car-item-info-detail">{{item.detail.sugar}}/{{item.detail.tem}}/{{item.detail.size}}</view>
+              <view class="price">￥{{item.cup.price}}</view>
             </view>
           </view>
-          <van-stepper value="{{ 1 }}" bind:change="onCarChange" />
+          <view class="cup-num">X{{item.num}}</view>
+          <!-- <van-stepper value="{{ item.num }}" bind:change="onCarChange" /> -->
         </view>
       </block>
     </van-popup>

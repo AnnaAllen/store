@@ -7,6 +7,9 @@
   position: fixed;
   overflow-y: scroll;
 }
+.order .select-eat {
+  padding-bottom: 20rpx;
+}
 .order .order-box1 {
   margin: 20rpx auto;
   padding: 40rpx;

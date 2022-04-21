@@ -8,6 +8,9 @@
   margin: 0 auto;
   text-align: center;
   position: relative;
+  width: 200rpx;
+  height: 150rpx;
+  line-height: 100rpx;
 }
 .meun .classify-item .van-sidebar-item image {
   background-color: #999999;

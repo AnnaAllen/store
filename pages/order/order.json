@@ -4,5 +4,6 @@
     "van-tabs": "@vant/weapp/tabs/index",
     "order-item": "../../components/order-item/order-item",
     "van-empty": "@vant/weapp/empty/index"
-  }
+  },
+  "navigationBarTitleText": "订单"
 }
